@@ -63,10 +63,24 @@ jobs:
       - name: Compilar y auditar versión pública
         run: npm run build:public
 
-      - name: Entregar paquete estático
+      - name: Crear ZIP listo para entregar
+        run: |
+          cd dist-public
+          zip -r ../portal-publico.zip .
+          cd ..
+
+      - name: Entregar portal compilado
         uses: actions/upload-artifact@v4
         with:
           name: portal-publico
           path: dist-public/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Entregar ZIP descargable
+        uses: actions/upload-artifact@v4
+        with:
+          name: portal-publico-zip
+          path: portal-publico.zip
           if-no-files-found: error
           retention-days: 30
