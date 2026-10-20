@@ -1,0 +1,70 @@
+name: Sincronizar y generar versión pública
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: portal-publico-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio público
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Obtener versión administrador
+        if: github.event_name != 'pull_request'
+        run: git clone --depth 1 --branch main https://github.com/fercayvi/CENTRO-DE-SERVICIOS-VERSION-BASE-1.0.git ../admin-source
+
+      - name: Sincronizar datos e imágenes públicas
+        if: github.event_name != 'pull_request'
+        run: |
+          cp ../admin-source/src/data.ts src/data.ts
+          rsync -a --delete ../admin-source/public/ public/
+
+      - name: Guardar sincronización en el repositorio público
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data.ts public/
+          if ! git diff --cached --quiet; then
+            git commit -m "Sincroniza datos e imágenes desde versión administrador"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo "Los datos y las imágenes ya están actualizados."
+          fi
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Validar TypeScript
+        run: npm run lint
+
+      - name: Compilar y auditar versión pública
+        run: npm run build:public
+
+      - name: Entregar paquete estático
+        uses: actions/upload-artifact@v4
+        with:
+          name: portal-publico
+          path: dist-public/
+          if-no-files-found: error
+          retention-days: 30
