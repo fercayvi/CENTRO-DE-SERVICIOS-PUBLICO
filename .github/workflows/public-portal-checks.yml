@@ -39,7 +39,7 @@ jobs:
         if: github.event_name != 'pull_request'
         run: |
           cp ../admin-source/src/data.ts src/data.ts
-          rsync -a --delete ../admin-source/public/ public/
+          rsync -a ../admin-source/public/ public/
 
       - name: Guardar sincronización en el repositorio público
         if: github.event_name != 'pull_request'
