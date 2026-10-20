@@ -1,6 +1,7 @@
 name: Sincronizar y generar versión pública
 
 on:
+  pull_request:
   workflow_dispatch:
   schedule:
     - cron: "*/15 * * * *"
@@ -29,14 +30,17 @@ jobs:
           cache: npm
 
       - name: Obtener versión administrador
+        if: github.event_name != 'pull_request'
         run: git clone --depth 1 --branch main https://github.com/fercayvi/CENTRO-DE-SERVICIOS-VERSION-BASE-1.0.git ../admin-source
 
       - name: Sincronizar datos e imágenes públicas
+        if: github.event_name != 'pull_request'
         run: |
           cp ../admin-source/src/data.ts src/data.ts
           rsync -a --delete ../admin-source/public/ public/
 
       - name: Guardar sincronización en el repositorio público
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
