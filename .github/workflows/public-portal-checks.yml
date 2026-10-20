@@ -1,6 +1,8 @@
 name: Sincronizar y generar versión pública
 
 on:
+  push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
   schedule:
@@ -20,7 +22,7 @@ jobs:
       - name: Obtener repositorio público
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
           fetch-depth: 0
 
       - name: Configurar Node
