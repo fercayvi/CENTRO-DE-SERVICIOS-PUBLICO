@@ -1,42 +1,66 @@
-name: Public portal checks
+name: Sincronizar y generar versión pública
 
 on:
-  push:
-    branches:
-      - "feat/**"
-      - "chore/**"
-      - "content/**"
-      - "release/**"
-      - "main"
-  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: portal-publico-sync
+  cancel-in-progress: false
 
 jobs:
-  validate-public-portal:
+  sync-build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Obtener repositorio público
         uses: actions/checkout@v4
-      - name: Set up Node.js
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Configurar Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-      - name: Install locked dependencies
+
+      - name: Obtener versión administrador
+        run: git clone --depth 1 --branch main https://github.com/fercayvi/CENTRO-DE-SERVICIOS-VERSION-BASE-1.0.git ../admin-source
+
+      - name: Sincronizar datos e imágenes públicas
+        run: |
+          cp ../admin-source/src/data.ts src/data.ts
+          rsync -a --delete ../admin-source/public/ public/
+
+      - name: Guardar sincronización en el repositorio público
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data.ts public/
+          if ! git diff --cached --quiet; then
+            git commit -m "Sincroniza datos e imágenes desde versión administrador"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo "Los datos y las imágenes ya están actualizados."
+          fi
+
+      - name: Instalar dependencias
         run: npm ci
-      - name: TypeScript check
+
+      - name: Validar TypeScript
         run: npm run lint
-      - name: Build public portal
+
+      - name: Compilar y auditar versión pública
         run: npm run build:public
-      - name: Audit dependencies
-        run: npm audit --audit-level=high
-      - name: Package public static build
-        if: success()
+
+      - name: Entregar paquete estático
         uses: actions/upload-artifact@v4
         with:
           name: portal-publico
           path: dist-public/
           if-no-files-found: error
-          retention-days: 14
+          retention-days: 30
