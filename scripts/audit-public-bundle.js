@@ -28,7 +28,6 @@ const forbiddenMarkers = [
   { label: 'trámite oculto politicas_pago', value: 'politicas_pago' },
   { label: 'trámite oculto recibos_cif', value: 'recibos_cif' },
   { label: 'trámite oculto caja_ahorro', value: 'caja_ahorro' },
-  { label: 'trámite oculto infonavit', value: 'infonavit' },
 ];
 
 const findings = [];
