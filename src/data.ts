@@ -255,7 +255,7 @@ export const initialServices: Service[] = [
                                   {
                                     "id": "txt_b_block_node_1788447230371_g53k_1",
                                     "type": "text",
-                                    "content": "6. Ingresa los datos adicionales que solicite la aplicación, como:\nFecha de vencimiento.\nCódigo de seguridad CVV, ubicado en la parte posterior de tu tarjeta.\n",
+                                    "content": "<b>6. Ingresa los datos adicionales que solicite la aplicación, como:\nFecha de vencimiento.\nCódigo de seguridad CVV, ubicado en la parte posterior de tu tarjeta.</b>\n",
                                     "align": "left",
                                     "style": "normal"
                                   },
@@ -278,7 +278,7 @@ export const initialServices: Service[] = [
                                     {
                                       "id": "txt_b_block_node_1788447230371_g53k_1",
                                       "type": "text",
-                                      "content": "6. Ingresa los datos adicionales que solicite la aplicación, como:\nFecha de vencimiento.\nCódigo de seguridad CVV, ubicado en la parte posterior de tu tarjeta.\n",
+                                      "content": "<b>6. Ingresa los datos adicionales que solicite la aplicación, como:\nFecha de vencimiento.\nCódigo de seguridad CVV, ubicado en la parte posterior de tu tarjeta.</b>\n",
                                       "align": "left",
                                       "style": "normal"
                                     },
@@ -300,7 +300,7 @@ export const initialServices: Service[] = [
                               {
                                 "id": "txt_b_block_node_1788447209926_h15m_1",
                                 "type": "text",
-                                "content": "5. Confirma tu cuenta ingresando el código de verificación que recibirás en el correo electrónico registrado.\n",
+                                "content": "<b>5. Confirma tu cuenta ingresando el código de verificación que recibirás en el correo electrónico registrado.</b>\n",
                                 "align": "left",
                                 "style": "normal"
                               },
@@ -323,7 +323,7 @@ export const initialServices: Service[] = [
                                 {
                                   "id": "txt_b_block_node_1788447209926_h15m_1",
                                   "type": "text",
-                                  "content": "5. Confirma tu cuenta ingresando el código de verificación que recibirás en el correo electrónico registrado.\n",
+                                  "content": "<b>5. Confirma tu cuenta ingresando el código de verificación que recibirás en el correo electrónico registrado.</b>\n",
                                   "align": "left",
                                   "style": "normal"
                                 },
@@ -345,7 +345,7 @@ export const initialServices: Service[] = [
                           {
                             "id": "txt_b_block_node_1788447195454_x0fa_1",
                             "type": "text",
-                            "content": "4. Coloca tu nombre y apellido, adicional selecciona la casilla del aviso de privacidad",
+                            "content": "<b>4. Coloca tu nombre y apellido, adicional selecciona la casilla del aviso de privacidad</b>",
                             "align": "left",
                             "style": "normal"
                           },
@@ -368,7 +368,7 @@ export const initialServices: Service[] = [
                             {
                               "id": "txt_b_block_node_1788447195454_x0fa_1",
                               "type": "text",
-                              "content": "4. Coloca tu nombre y apellido, adicional selecciona la casilla del aviso de privacidad",
+                              "content": "<b>4. Coloca tu nombre y apellido, adicional selecciona la casilla del aviso de privacidad</b>",
                               "align": "left",
                               "style": "normal"
                             },
@@ -390,7 +390,7 @@ export const initialServices: Service[] = [
                       {
                         "id": "txt_b_block_node_1788447179506_x8rv_1",
                         "type": "text",
-                        "content": "3. Ingresa tu correo electrónico y crea una contraseña segura\n",
+                        "content": "<b>3. Ingresa tu correo electrónico y crea una contraseña segura</b>\n",
                         "align": "left",
                         "style": "normal"
                       },
@@ -413,7 +413,7 @@ export const initialServices: Service[] = [
                         {
                           "id": "txt_b_block_node_1788447179506_x8rv_1",
                           "type": "text",
-                          "content": "3. Ingresa tu correo electrónico y crea una contraseña segura\n",
+                          "content": "<b>3. Ingresa tu correo electrónico y crea una contraseña segura</b>\n",
                           "align": "left",
                           "style": "normal"
                         },
@@ -435,7 +435,7 @@ export const initialServices: Service[] = [
                   {
                     "id": "txt_b_block_node_1788447025718_4lto_1",
                     "type": "text",
-                    "content": "2. Selecciona la opción “Regístrate”",
+                    "content": "<b>2. Selecciona la opción “Regístrate”</b>",
                     "align": "left",
                     "style": "normal"
                   },
@@ -458,7 +458,7 @@ export const initialServices: Service[] = [
                     {
                       "id": "txt_b_block_node_1788447025718_4lto_1",
                       "type": "text",
-                      "content": "2. Selecciona la opción “Regístrate”",
+                      "content": "<b>2. Selecciona la opción “Regístrate”</b>",
                       "align": "left",
                       "style": "normal"
                     },
@@ -480,7 +480,7 @@ export const initialServices: Service[] = [
               {
                 "id": "txt_b_block_node_1788446978640_awy8_1",
                 "type": "text",
-                "content": "1. Descarga la aplicación oficial Edenred en tu celular.\n",
+                "content": "<b>1. Descarga la aplicación oficial Edenred en tu celular.</b>\n",
                 "align": "left",
                 "style": "normal"
               },
@@ -503,7 +503,7 @@ export const initialServices: Service[] = [
                 {
                   "id": "txt_b_block_node_1788446978640_awy8_1",
                   "type": "text",
-                  "content": "1. Descarga la aplicación oficial Edenred en tu celular.\n",
+                  "content": "<b>1. Descarga la aplicación oficial Edenred en tu celular.</b>\n",
                   "align": "left",
                   "style": "normal"
                 },
@@ -714,7 +714,7 @@ export const initialServices: Service[] = [
               }
             ],
             "contentData": {
-              "text": " Acude al Módulo de Servicio al Personal para realizar el trámite.\n\nSolicita tu reposición por un costo de $49 MXN.\n\n",
+              "text": " Acude al Módulo de Servicio al Personal para realizar el trámite.\n\nSolicita tu reposici��n por un costo de $49 MXN.\n\n",
               "imageUrl": "",
               "videoUrl": "",
               "layoutBlocks": [
@@ -766,7 +766,7 @@ export const initialServices: Service[] = [
                 "id": "txt_1792776142823_5skk7",
                 "type": "text",
                 "title": "¿Cómo puedes activarla?",
-                "content": "¡Activa tu tarjeta en unos sencillos pasos!<p><br></p><p></p><ol><li>Inserta tu tarjeta en cualquier cajero automático.</li><li>Ingresa el NIP que aparece en el desprendible de la tarjeta.</li><li>El cajero automático te solicitará cambiar el NIP por uno</li><li>nuevo que solo tú conozcas.</li></ol><p></p>",
+                "content": "<ul><li>Inserta tu tarjeta en cualquier cajero automático.</li><li>Ingresa el NIP que aparece en el desprendible de la tarjeta.</li><li>El cajero automático te solicitará cambiar el NIP por uno.</li><li>nuevo que solo tú conozcas.</li></ul><p></p>",
                 "align": "left",
                 "style": "normal"
               }
@@ -796,7 +796,7 @@ export const initialServices: Service[] = [
                   "id": "txt_1792776142823_5skk7",
                   "type": "text",
                   "title": "¿Cómo puedes activarla?",
-                  "content": "¡Activa tu tarjeta en unos sencillos pasos!<p><br></p><p></p><ol><li>Inserta tu tarjeta en cualquier cajero automático.</li><li>Ingresa el NIP que aparece en el desprendible de la tarjeta.</li><li>El cajero automático te solicitará cambiar el NIP por uno</li><li>nuevo que solo tú conozcas.</li></ol><p></p>",
+                  "content": "<ul><li>Inserta tu tarjeta en cualquier cajero automático.</li><li>Ingresa el NIP que aparece en el desprendible de la tarjeta.</li><li>El cajero automático te solicitará cambiar el NIP por uno.</li><li>nuevo que solo tú conozcas.</li></ul><p></p>",
                   "align": "left",
                   "style": "normal"
                 }
@@ -806,23 +806,187 @@ export const initialServices: Service[] = [
           {
             "id": "node_1792708543192_5l3p",
             "title": "¿Cómo descargar Banorte Móvil?",
-            "nodeType": "category",
-            "children": [],
+            "nodeType": "content",
+            "blocks": [
+              {
+                "id": "txt_1793226346287_jgizv",
+                "type": "text",
+                "title": "¿Cómo descargar Banorte Móvil?",
+                "content": "Registra y administra tu tarjeta desde la app:\n",
+                "align": "left",
+                "style": "normal"
+              },
+              {
+                "id": "cols_1793226327144_pzsb4",
+                "type": "columns",
+                "columnsCount": 3,
+                "layout": "equal",
+                "backgroundColor": "white",
+                "columns": [
+                  {
+                    "id": "col_1_1793226327143_1k34c",
+                    "blocks": [
+                      {
+                        "id": "txt_1793226382174_5eti1",
+                        "type": "text",
+                        "title": "Descarga",
+                        "content": "Descarga Banorte Móvil y selecciona “Registrarme”.\n",
+                        "align": "left",
+                        "style": "normal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col_2_1793226327144_t7f1a",
+                    "blocks": [
+                      {
+                        "id": "txt_1793226383759_wrwen",
+                        "type": "text",
+                        "title": "Ingresa tu numero de tarjeta",
+                        "content": "Ingresa tu número de tarjeta de nómina y captura los datos solicitados.\n",
+                        "align": "left",
+                        "style": "normal"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col_3_1793226327144_krrfy",
+                    "blocks": [
+                      {
+                        "id": "txt_1793226385561_4ax6v",
+                        "type": "text",
+                        "title": "Crea usuario y contraseña",
+                        "content": "Crea tu usuario y contraseña, e ingresa el código de activación que recibirás por SMS\n",
+                        "align": "left",
+                        "style": "normal"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "txt_1793226508278_3wzrm",
+                "type": "text",
+                "title": "¿Cuándo recibo mi nómina?",
+                "content": "<ul data-spread=\"false\" data-pm-slice=\"3 1 []\"><li><p><strong>Pago semanal:</strong> todos los viernes, después del mediodía.</p></li><li><p><strong>Pago quincenal:</strong> los días 15 y 30 de cada mes.</p></li></ul><p>Tu nómina se deposita directamente en tu cuenta bancaria.<br></p>",
+                "align": "left",
+                "style": "normal"
+              }
+            ],
             "contentData": {
               "text": "",
               "imageUrl": "",
-              "videoUrl": ""
+              "videoUrl": "",
+              "layoutBlocks": [
+                {
+                  "id": "txt_1793226346287_jgizv",
+                  "type": "text",
+                  "title": "¿Cómo descargar Banorte Móvil?",
+                  "content": "Registra y administra tu tarjeta desde la app:\n",
+                  "align": "left",
+                  "style": "normal"
+                },
+                {
+                  "id": "cols_1793226327144_pzsb4",
+                  "type": "columns",
+                  "columnsCount": 3,
+                  "layout": "equal",
+                  "backgroundColor": "white",
+                  "columns": [
+                    {
+                      "id": "col_1_1793226327143_1k34c",
+                      "blocks": [
+                        {
+                          "id": "txt_1793226382174_5eti1",
+                          "type": "text",
+                          "title": "Descarga",
+                          "content": "Descarga Banorte Móvil y selecciona “Registrarme”.\n",
+                          "align": "left",
+                          "style": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "col_2_1793226327144_t7f1a",
+                      "blocks": [
+                        {
+                          "id": "txt_1793226383759_wrwen",
+                          "type": "text",
+                          "title": "Ingresa tu numero de tarjeta",
+                          "content": "Ingresa tu número de tarjeta de nómina y captura los datos solicitados.\n",
+                          "align": "left",
+                          "style": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "col_3_1793226327144_krrfy",
+                      "blocks": [
+                        {
+                          "id": "txt_1793226385561_4ax6v",
+                          "type": "text",
+                          "title": "Crea usuario y contraseña",
+                          "content": "Crea tu usuario y contraseña, e ingresa el código de activación que recibirás por SMS\n",
+                          "align": "left",
+                          "style": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "txt_1793226508278_3wzrm",
+                  "type": "text",
+                  "title": "¿Cuándo recibo mi nómina?",
+                  "content": "<ul data-spread=\"false\" data-pm-slice=\"3 1 []\"><li><p><strong>Pago semanal:</strong> todos los viernes, después del mediodía.</p></li><li><p><strong>Pago quincenal:</strong> los días 15 y 30 de cada mes.</p></li></ul><p>Tu nómina se deposita directamente en tu cuenta bancaria.<br></p>",
+                  "align": "left",
+                  "style": "normal"
+                }
+              ]
             }
           },
           {
             "id": "node_1792708603174_a2lj",
-            "title": "¿Tienes una nueva tarjeta Banorte?",
-            "nodeType": "category",
-            "children": [],
+            "title": "¿Cómo asociar una nueva tarjeta Banorte?",
+            "nodeType": "content",
+            "blocks": [
+              {
+                "id": "txt_1793225930551_4dq6u",
+                "type": "text",
+                "title": "Si recibiste una nueva tarjeta, sigue estos pasos para vincularla a tu cuenta en Banorte Móvil.",
+                "content": "<p data-pm-slice=\"1 3 []\"><strong>Pasos a seguir:</strong></p><ol data-spread=\"false\"><li><p><strong>Ingresa a Banorte Móvil:</strong> inicia sesión con tu usuario y contraseña.</p></li><li><p><strong>Selecciona tu cuenta:</strong> entra al apartado de Ajustes.</p></li><li><p><strong>Asocia tu tarjeta:</strong> selecciona la opción «Asociar Tarjeta».</p></li><li><p><strong>Ingresa los datos:</strong> captura los 16 dígitos de tu nueva tarjeta.</p></li><li><p><strong>Confirma la activación:</strong> verifica que la tarjeta aparezca vinculada a tu cuenta.<br></p></li></ol>",
+                "align": "left",
+                "style": "normal"
+              },
+              {
+                "id": "alt_1793225961306_9r0kt",
+                "type": "alert",
+                "level": "warning",
+                "title": "Aviso Importante",
+                "message": "Si recibiste una nueva tarjeta, revisa si necesitas asociarla nuevamente en Banorte Móvil para mantenerla vinculada a tu cuenta."
+              }
+            ],
             "contentData": {
               "text": "",
               "imageUrl": "",
-              "videoUrl": ""
+              "videoUrl": "",
+              "layoutBlocks": [
+                {
+                  "id": "txt_1793225930551_4dq6u",
+                  "type": "text",
+                  "title": "Si recibiste una nueva tarjeta, sigue estos pasos para vincularla a tu cuenta en Banorte Móvil.",
+                  "content": "<p data-pm-slice=\"1 3 []\"><strong>Pasos a seguir:</strong></p><ol data-spread=\"false\"><li><p><strong>Ingresa a Banorte Móvil:</strong> inicia sesión con tu usuario y contraseña.</p></li><li><p><strong>Selecciona tu cuenta:</strong> entra al apartado de Ajustes.</p></li><li><p><strong>Asocia tu tarjeta:</strong> selecciona la opción «Asociar Tarjeta».</p></li><li><p><strong>Ingresa los datos:</strong> captura los 16 dígitos de tu nueva tarjeta.</p></li><li><p><strong>Confirma la activación:</strong> verifica que la tarjeta aparezca vinculada a tu cuenta.<br></p></li></ol>",
+                  "align": "left",
+                  "style": "normal"
+                },
+                {
+                  "id": "alt_1793225961306_9r0kt",
+                  "type": "alert",
+                  "level": "warning",
+                  "title": "Aviso Importante",
+                  "message": "Si recibiste una nueva tarjeta, revisa si necesitas asociarla nuevamente en Banorte Móvil para mantenerla vinculada a tu cuenta."
+                }
+              ]
             }
           }
         ],
@@ -1474,12 +1638,312 @@ export const initialServices: Service[] = [
       {
         "id": "node_1793118703831_4n7h",
         "title": "¿Cómo consultar mi precalificación?",
-        "nodeType": "category",
-        "children": [],
+        "nodeType": "step",
+        "children": [
+          {
+            "id": "node_1793218932786_ihcu",
+            "title": "Selecciona “Comprar una Vivienda”.",
+            "nodeType": "step",
+            "children": [
+              {
+                "id": "node_1793219005820_pndw",
+                "title": "Continúa con la precalificación",
+                "nodeType": "step",
+                "children": [
+                  {
+                    "id": "node_1793219049155_u3mb",
+                    "title": "Selecciona “Crédito Individual”.",
+                    "nodeType": "step",
+                    "children": [
+                      {
+                        "id": "node_1793219073585_6ngn",
+                        "title": "Consulta tu precalificación",
+                        "nodeType": "step",
+                        "children": [
+                          {
+                            "id": "node_1793219131852_l79m",
+                            "title": "Consulta el monto disponible",
+                            "nodeType": "step",
+                            "children": [],
+                            "blocks": [
+                              {
+                                "id": "txt_1793219406279_15zut",
+                                "type": "text",
+                                "title": "Consulta el monto disponible",
+                                "content": "<b>Al finalizar, podrás visualizar el monto de crédito que tienes disponible para adquirir tu vivienda.</b>",
+                                "align": "left",
+                                "style": "normal"
+                              },
+                              {
+                                "id": "img_1793223550550_16iwe",
+                                "type": "media",
+                                "mediaType": "image",
+                                "title": "",
+                                "url": "/1793223555449-Captura-de-pantalla-2026-10-28-152917.png",
+                                "caption": "",
+                                "alignment": "center",
+                                "widthPercent": 100
+                              }
+                            ],
+                            "contentData": {
+                              "text": "",
+                              "imageUrl": "",
+                              "videoUrl": "",
+                              "layoutBlocks": [
+                                {
+                                  "id": "txt_1793219406279_15zut",
+                                  "type": "text",
+                                  "title": "Consulta el monto disponible",
+                                  "content": "<b>Al finalizar, podrás visualizar el monto de crédito que tienes disponible para adquirir tu vivienda.</b>",
+                                  "align": "left",
+                                  "style": "normal"
+                                },
+                                {
+                                  "id": "img_1793223550550_16iwe",
+                                  "type": "media",
+                                  "mediaType": "image",
+                                  "title": "",
+                                  "url": "/1793223555449-Captura-de-pantalla-2026-10-28-152917.png",
+                                  "caption": "",
+                                  "alignment": "center",
+                                  "widthPercent": 100
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "blocks": [
+                          {
+                            "id": "txt_1793219089688_e88sj",
+                            "type": "text",
+                            "title": "Consulta tu precalificación",
+                            "content": "<b>En la sección correspondiente, selecciona “Crédito Infonavit”.</b>",
+                            "align": "left",
+                            "style": "normal"
+                          },
+                          {
+                            "id": "img_1793219097101_b0944",
+                            "type": "media",
+                            "mediaType": "image",
+                            "title": "",
+                            "url": "/1793223543419-Captura-de-pantalla-2026-10-28-152908.png",
+                            "caption": "",
+                            "alignment": "center",
+                            "widthPercent": 100
+                          }
+                        ],
+                        "contentData": {
+                          "text": "",
+                          "imageUrl": "",
+                          "videoUrl": "",
+                          "layoutBlocks": [
+                            {
+                              "id": "txt_1793219089688_e88sj",
+                              "type": "text",
+                              "title": "Consulta tu precalificación",
+                              "content": "<b>En la sección correspondiente, selecciona “Crédito Infonavit”.</b>",
+                              "align": "left",
+                              "style": "normal"
+                            },
+                            {
+                              "id": "img_1793219097101_b0944",
+                              "type": "media",
+                              "mediaType": "image",
+                              "title": "",
+                              "url": "/1793223543419-Captura-de-pantalla-2026-10-28-152908.png",
+                              "caption": "",
+                              "alignment": "center",
+                              "widthPercent": 100
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "blocks": [
+                      {
+                        "id": "txt_1793219354626_pfpq9",
+                        "type": "text",
+                        "title": "Selecciona “Crédito Individual”.",
+                        "content": "",
+                        "align": "left",
+                        "style": "normal"
+                      },
+                      {
+                        "id": "img_1793219059660_a5vcp",
+                        "type": "media",
+                        "mediaType": "image",
+                        "title": "",
+                        "url": "/1793219065270-tercerpasoCCMP.png",
+                        "caption": "",
+                        "alignment": "center",
+                        "widthPercent": 100
+                      }
+                    ],
+                    "contentData": {
+                      "text": "",
+                      "imageUrl": "",
+                      "videoUrl": "",
+                      "layoutBlocks": [
+                        {
+                          "id": "txt_1793219354626_pfpq9",
+                          "type": "text",
+                          "title": "Selecciona “Crédito Individual”.",
+                          "content": "",
+                          "align": "left",
+                          "style": "normal"
+                        },
+                        {
+                          "id": "img_1793219059660_a5vcp",
+                          "type": "media",
+                          "mediaType": "image",
+                          "title": "",
+                          "url": "/1793219065270-tercerpasoCCMP.png",
+                          "caption": "",
+                          "alignment": "center",
+                          "widthPercent": 100
+                        }
+                      ]
+                    }
+                  }
+                ],
+                "blocks": [
+                  {
+                    "id": "txt_1793219023256_lhf9t",
+                    "type": "text",
+                    "title": "Continúa con la precalificación",
+                    "content": "<b>Aparecerá un aviso relacionado con tu precalificación. Haz clic en “Continuar”.</b>",
+                    "align": "left",
+                    "style": "normal"
+                  },
+                  {
+                    "id": "img_1793219033190_yhera",
+                    "type": "media",
+                    "mediaType": "image",
+                    "title": "",
+                    "url": "/1793219042749-segundopasoCCMP.png",
+                    "caption": "",
+                    "alignment": "center",
+                    "widthPercent": 100
+                  }
+                ],
+                "contentData": {
+                  "text": "",
+                  "imageUrl": "",
+                  "videoUrl": "",
+                  "layoutBlocks": [
+                    {
+                      "id": "txt_1793219023256_lhf9t",
+                      "type": "text",
+                      "title": "Continúa con la precalificación",
+                      "content": "<b>Aparecerá un aviso relacionado con tu precalificación. Haz clic en “Continuar”.</b>",
+                      "align": "left",
+                      "style": "normal"
+                    },
+                    {
+                      "id": "img_1793219033190_yhera",
+                      "type": "media",
+                      "mediaType": "image",
+                      "title": "",
+                      "url": "/1793219042749-segundopasoCCMP.png",
+                      "caption": "",
+                      "alignment": "center",
+                      "widthPercent": 100
+                    }
+                  ]
+                }
+              }
+            ],
+            "blocks": [
+              {
+                "id": "txt_1793219294920_mgp2b",
+                "type": "text",
+                "title": "Selecciona “Comprar una Vivienda”.",
+                "content": "",
+                "align": "left",
+                "style": "normal"
+              },
+              {
+                "id": "img_1793218949708_8mqva",
+                "type": "media",
+                "mediaType": "image",
+                "title": "",
+                "url": "/1793218989607-primerpasoCCMP.png",
+                "caption": "",
+                "alignment": "center",
+                "widthPercent": 100
+              }
+            ],
+            "contentData": {
+              "text": "",
+              "imageUrl": "",
+              "videoUrl": "",
+              "layoutBlocks": [
+                {
+                  "id": "txt_1793219294920_mgp2b",
+                  "type": "text",
+                  "title": "Selecciona “Comprar una Vivienda”.",
+                  "content": "",
+                  "align": "left",
+                  "style": "normal"
+                },
+                {
+                  "id": "img_1793218949708_8mqva",
+                  "type": "media",
+                  "mediaType": "image",
+                  "title": "",
+                  "url": "/1793218989607-primerpasoCCMP.png",
+                  "caption": "",
+                  "alignment": "center",
+                  "widthPercent": 100
+                }
+              ]
+            }
+          }
+        ],
+        "blocks": [
+          {
+            "id": "txt_1793218640943_57yt6",
+            "type": "text",
+            "title": "Ingresa a Mi Cuenta Infonavit",
+            "content": "Captura tu Número de Seguridad Social (NSS) y tu contraseña.",
+            "align": "left",
+            "style": "normal"
+          },
+          {
+            "id": "img_1793218663747_rfoaj",
+            "type": "media",
+            "mediaType": "image",
+            "title": "",
+            "url": "/1793218916806-Captura-de-pantalla-2026-10-28-122654.png",
+            "caption": "",
+            "alignment": "center",
+            "widthPercent": 100
+          }
+        ],
         "contentData": {
           "text": "",
           "imageUrl": "",
-          "videoUrl": ""
+          "videoUrl": "",
+          "layoutBlocks": [
+            {
+              "id": "txt_1793218640943_57yt6",
+              "type": "text",
+              "title": "Ingresa a Mi Cuenta Infonavit",
+              "content": "Captura tu Número de Seguridad Social (NSS) y tu contraseña.",
+              "align": "left",
+              "style": "normal"
+            },
+            {
+              "id": "img_1793218663747_rfoaj",
+              "type": "media",
+              "mediaType": "image",
+              "title": "",
+              "url": "/1793218916806-Captura-de-pantalla-2026-10-28-122654.png",
+              "caption": "",
+              "alignment": "center",
+              "widthPercent": 100
+            }
+          ]
         }
       }
     ],
@@ -1510,20 +1974,138 @@ export const initialServices: Service[] = [
         "id": "node_root_1",
         "title": " ¿Cómo dar de alta a tus beneficiarios en tu clínica del IMSS?",
         "nodeType": "content",
+        "blocks": [
+          {
+            "id": "txt_1793223743498_y2phh",
+            "type": "text",
+            "title": "¿Qué necesitas?",
+            "content": "<p>Tu NSS (Número de Seguridad Social).</p>Tu CURP y la CURP de cada familiar.<br>Un correo electrónico personal.\n",
+            "align": "left",
+            "style": "normal"
+          },
+          {
+            "id": "txt_1793225688721_iyhcg",
+            "type": "text",
+            "title": "Documentos por familiar",
+            "content": "<ul><li><b>Esposa/o:</b> identificación oficial, foto tamaño infantil y acta de matrimonio.</li><li><b>Hijos:</b> acta de nacimiento, adopción o reconocimiento y foto tamaño infantil.</li><li><b>Mamá o papá:</b> identificación, tu acta de nacimiento, comprobante de domicilio, foto tamaño infantil y manifestación de convivencia y dependencia económica.</li></ul>",
+            "align": "left",
+            "style": "normal"
+          },
+          {
+            "id": "txt_1793224006547_gihng",
+            "type": "text",
+            "title": "",
+            "content": "Acude a la UMF que te corresponde, al área de Afiliación/Vigencia de Derechos, llevando los documentos originales y copias. <b>El trámite es gratuito.</b><br>",
+            "align": "left",
+            "style": "normal"
+          }
+        ],
         "contentData": {
           "text": "",
           "imageUrl": "",
-          "videoUrl": ""
+          "videoUrl": "",
+          "layoutBlocks": [
+            {
+              "id": "txt_1793223743498_y2phh",
+              "type": "text",
+              "title": "¿Qué necesitas?",
+              "content": "<p>Tu NSS (Número de Seguridad Social).</p>Tu CURP y la CURP de cada familiar.<br>Un correo electrónico personal.\n",
+              "align": "left",
+              "style": "normal"
+            },
+            {
+              "id": "txt_1793225688721_iyhcg",
+              "type": "text",
+              "title": "Documentos por familiar",
+              "content": "<ul><li><b>Esposa/o:</b> identificación oficial, foto tamaño infantil y acta de matrimonio.</li><li><b>Hijos:</b> acta de nacimiento, adopción o reconocimiento y foto tamaño infantil.</li><li><b>Mamá o papá:</b> identificación, tu acta de nacimiento, comprobante de domicilio, foto tamaño infantil y manifestación de convivencia y dependencia económica.</li></ul>",
+              "align": "left",
+              "style": "normal"
+            },
+            {
+              "id": "txt_1793224006547_gihng",
+              "type": "text",
+              "title": "",
+              "content": "Acude a la UMF que te corresponde, al área de Afiliación/Vigencia de Derechos, llevando los documentos originales y copias. <b>El trámite es gratuito.</b><br>",
+              "align": "left",
+              "style": "normal"
+            }
+          ]
         }
       },
       {
         "id": "node_1793046417290_f4yq",
         "title": "Incapacidades",
         "nodeType": "content",
+        "blocks": [
+          {
+            "id": "txt_1793224381136_dkh3z",
+            "type": "text",
+            "title": "Porcentaje y fecha de pago:",
+            "content": "<ul data-spread=\"false\" data-pm-slice=\"3 3 []\"><li><p><strong>Enfermedad general:</strong> 60% del salario base de cotización (SBC), a partir del 4.º día.</p></li><li><p><strong>Riesgo de trabajo:</strong> 100% del SBC, desde el primer día.</p></li><li><p><strong>Maternidad:</strong> 100% del SBC durante la licencia de 84 días.<br></p></li></ul>",
+            "align": "left",
+            "style": "normal"
+          },
+          {
+            "id": "txt_1793224676385_iba2i",
+            "type": "text",
+            "title": "Documentos necesarios:",
+            "content": "<ul><li>Copia para el asegurado del certificado de incapacidad del IMSS.</li><li>Identificación oficial vigente con fotografía (INE o pasaporte).</li><li>Número de Seguridad Social (NSS).<br></li></ul>",
+            "align": "left",
+            "style": "normal"
+          },
+          {
+            "id": "txt_1793224528077_nawsm",
+            "type": "text",
+            "title": "¿Dónde cobrar?",
+            "content": "<p data-pm-slice=\"1 1 []\">Puedes acudir a cualquiera de los siguientes bancos:</p><ul><li>BBVA</li><li>Banorte</li><li>HSBC</li><li>Santander</li><li>Banamex</li><li>Scotiabank</li></ul>",
+            "align": "left",
+            "style": "normal"
+          },
+          {
+            "id": "alt_1793224513634_zoksv",
+            "type": "alert",
+            "level": "warning",
+            "title": "Aviso Importante",
+            "message": "Deberás acudir personalmente a la ventanilla bancaria para gestionar el cobro de tu incapacidad.\n"
+          }
+        ],
         "contentData": {
           "text": "",
           "imageUrl": "",
-          "videoUrl": ""
+          "videoUrl": "",
+          "layoutBlocks": [
+            {
+              "id": "txt_1793224381136_dkh3z",
+              "type": "text",
+              "title": "Porcentaje y fecha de pago:",
+              "content": "<ul data-spread=\"false\" data-pm-slice=\"3 3 []\"><li><p><strong>Enfermedad general:</strong> 60% del salario base de cotización (SBC), a partir del 4.º día.</p></li><li><p><strong>Riesgo de trabajo:</strong> 100% del SBC, desde el primer día.</p></li><li><p><strong>Maternidad:</strong> 100% del SBC durante la licencia de 84 días.<br></p></li></ul>",
+              "align": "left",
+              "style": "normal"
+            },
+            {
+              "id": "txt_1793224676385_iba2i",
+              "type": "text",
+              "title": "Documentos necesarios:",
+              "content": "<ul><li>Copia para el asegurado del certificado de incapacidad del IMSS.</li><li>Identificación oficial vigente con fotografía (INE o pasaporte).</li><li>Número de Seguridad Social (NSS).<br></li></ul>",
+              "align": "left",
+              "style": "normal"
+            },
+            {
+              "id": "txt_1793224528077_nawsm",
+              "type": "text",
+              "title": "¿Dónde cobrar?",
+              "content": "<p data-pm-slice=\"1 1 []\">Puedes acudir a cualquiera de los siguientes bancos:</p><ul><li>BBVA</li><li>Banorte</li><li>HSBC</li><li>Santander</li><li>Banamex</li><li>Scotiabank</li></ul>",
+              "align": "left",
+              "style": "normal"
+            },
+            {
+              "id": "alt_1793224513634_zoksv",
+              "type": "alert",
+              "level": "warning",
+              "title": "Aviso Importante",
+              "message": "Deberás acudir personalmente a la ventanilla bancaria para gestionar el cobro de tu incapacidad.\n"
+            }
+          ]
         }
       }
     ],
@@ -1545,7 +2127,7 @@ export const initialServices: Service[] = [
     "attachments": [],
     "alertNotice": "",
     "layoutBlocks": [],
-    "hidden": true
+    "hidden": false
   },
   {
     "id": "custom_1793134000134",
