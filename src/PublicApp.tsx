@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Search, X } from 'lucide-react';
-import { Service } from './types';
+import { Service, NewsItem } from './types';
 import { initialServices, initialNews, initialContact, defaultCategories, siteSettings } from './data';
 import BottomNav from './components/BottomNav';
 import TopBar from './components/TopBar';
 import HomeTab from './components/HomeTab';
 import ServiceDetail from './components/ServiceDetail';
 import NewsTab from './components/NewsTab';
+import NewsDetail from './components/NewsDetail';
 import AsistenteTab from './components/AsistenteTab';
 import SearchTab from './components/SearchTab';
 import ScrollProgressBar from './components/ScrollProgressBar';
@@ -21,6 +22,7 @@ export default function PublicApp() {
   const [currentTab, setCurrentTab] = useState<'inicio' | 'buscar' | 'noticias' | 'asistente'>('inicio');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedService, setSelectedService] = useState<(Service & { hidden?: boolean }) | null>(null);
+  const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [unreadNewsCount, setUnreadNewsCount] = useState(0);
   const [isImageZoomed, setIsImageZoomed] = useState(false);
@@ -28,13 +30,14 @@ export default function PublicApp() {
   // En la versión pública, regresar automáticamente al inicio tras 2 minutos sin actividad,
   // tanto al consultar un trámite como al permanecer en cualquier sección de navegación.
   useEffect(() => {
-    if (!selectedService && currentTab === 'inicio') return;
+    if (!selectedService && !selectedNews && currentTab === 'inicio') return;
 
     let idleTimeout: ReturnType<typeof setTimeout>;
 
     const returnToMenu = () => {
       setIsImageZoomed(false);
       setSelectedService(null);
+      setSelectedNews(null);
       setSearchQuery('');
       setCurrentTab('inicio');
       setSelectedCategory(null);
@@ -60,7 +63,7 @@ export default function PublicApp() {
         window.removeEventListener(eventName, resetIdleTimeout);
       });
     };
-  }, [selectedService, currentTab]);
+  }, [selectedService, selectedNews, currentTab]);
 
   const handleSelectService = (service: Service & { hidden?: boolean }) => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -73,6 +76,7 @@ export default function PublicApp() {
   const handleTabChange = (tab: 'inicio' | 'buscar' | 'noticias' | 'asistente') => {
     setCurrentTab(tab);
     setSelectedService(null);
+    setSelectedNews(null);
     if (tab === 'inicio') {
       setSearchQuery('');
       setSelectedCategory(null);
@@ -83,6 +87,7 @@ export default function PublicApp() {
     window.scrollTo({ top: 0, behavior: 'instant' });
     scrollRef.current?.scrollTo({ top: 0, behavior: 'instant' });
     setSelectedService(null);
+    setSelectedNews(null);
     setSearchQuery('');
     setSelectedCategory(null);
     setCurrentTab('inicio');
@@ -94,12 +99,13 @@ export default function PublicApp() {
         <div id="phone-screen-container" className="w-full flex-1 overflow-hidden flex flex-col relative">
           <div id="phone-main-scrollable-content" ref={scrollRef} className="flex-1 overflow-y-auto pt-2 sm:pt-3 relative pb-28">
             <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
-              <div className={selectedService ? 'hidden' : ''}>
+              <div className={selectedService || selectedNews ? 'hidden' : ''}>
                 <TopBar
                   showAdminButton={false}
                   currentTab={currentTab}
                   setCurrentTab={handleTabChange}
                   unreadNewsCount={unreadNewsCount}
+                  showNewsLink={!(siteSettings.showNewsOnHome === true && initialNews.some(item => item.showOnHome !== false))}
                   searchQuery={searchQuery}
                   onSearch={(query) => {
                     setSearchQuery(query);
@@ -109,7 +115,14 @@ export default function PublicApp() {
                   onGoHome={goHome}
                 />
               </div>
-              {selectedService ? (
+              {selectedNews ? (
+                <div className="relative animate-fadeIn min-h-screen">
+                  <div className="fixed inset-0 bg-slate-50 z-30 pointer-events-none" aria-hidden="true" />
+                  <div className="relative z-40 w-full max-w-5xl mx-auto px-1 sm:px-3 py-1 sm:py-3">
+                    <NewsDetail news={selectedNews} onBack={() => setSelectedNews(null)} />
+                  </div>
+                </div>
+              ) : selectedService ? (
                 <div className="relative animate-fadeIn min-h-screen">
                   <div id="service-detail-backdrop" className="fixed inset-0 bg-slate-50 z-30 pointer-events-none" aria-hidden="true" />
                   <div className="relative z-40 w-full max-w-5xl mx-auto px-1 sm:px-3 py-1 sm:py-3">
