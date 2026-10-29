@@ -187,6 +187,16 @@ export default function PublicApp() {
                         categories={defaultCategories}
                         settings={siteSettings}
                         newsList={initialNews}
+                        onSelectNews={(item) => {
+                          setSelectedNews(item);
+                          try {
+                            const readIds = new Set<string>(JSON.parse(localStorage.getItem('cc-read-news-v1') || '[]'));
+                            readIds.add(String(item.id));
+                            localStorage.setItem('cc-read-news-v1', JSON.stringify(Array.from(readIds)));
+                          } catch (error) {
+                            console.error('Error al marcar noticia como leída:', error);
+                          }
+                        }}
                         onViewAllNews={() => {
                           setCurrentTab('noticias');
                           setSelectedCategory(null);
