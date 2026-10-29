@@ -173,6 +173,11 @@ export default function PublicApp() {
                         onSelectCategory={setSelectedCategory}
                         categories={defaultCategories}
                         settings={siteSettings}
+                        newsList={initialNews}
+                        onViewAllNews={() => {
+                          setCurrentTab('noticias');
+                          setSelectedCategory(null);
+                        }}
                       />
                     </div>
                   )}
