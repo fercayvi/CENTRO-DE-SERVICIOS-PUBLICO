@@ -7,6 +7,7 @@ export interface TopBarProps {
   currentTab?: 'inicio' | 'buscar' | 'noticias' | 'asistente';
   setCurrentTab?: (tab: 'inicio' | 'buscar' | 'noticias' | 'asistente') => void;
   unreadNewsCount?: number;
+  showNewsLink?: boolean;
   searchQuery?: string;
   onSearch?: (query: string) => void;
   onGoHome?: () => void;
@@ -19,6 +20,7 @@ export default function TopBar({
   currentTab = 'inicio', 
   setCurrentTab,
   unreadNewsCount = 0,
+  showNewsLink = true,
   onGoHome,
   showAdminButton = true
 }: TopBarProps) {
@@ -84,7 +86,7 @@ export default function TopBar({
               <span>Buscar</span>
             </button>
 
-            <button
+            {showNewsLink && <button
               type="button"
               id="desktop-nav-noticias"
               onClick={() => setCurrentTab('noticias')}
@@ -104,7 +106,7 @@ export default function TopBar({
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
                 </span>
               )}
-            </button>
+            </button>}
 
             <button
               type="button"
