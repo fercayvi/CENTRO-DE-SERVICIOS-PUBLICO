@@ -206,7 +206,7 @@ export default function PublicApp() {
                   )}
 
                   {currentTab === 'noticias' && (
-                    <NewsTab newsList={initialNews} onUnreadCountChange={setUnreadNewsCount} />
+                    <NewsTab newsList={initialNews} onUnreadCountChange={setUnreadNewsCount} onSelectNews={setSelectedNews} />
                   )}
 
                   {currentTab === 'asistente' && <AsistenteTab contactInfo={initialContact} />}
