@@ -23,6 +23,13 @@ export default function PublicApp() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedService, setSelectedService] = useState<(Service & { hidden?: boolean }) | null>(null);
   const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
+
+  // Cada noticia debe abrirse desde el inicio del contenedor, sin heredar el scroll anterior.
+  useEffect(() => {
+    if (!selectedNews) return;
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    scrollRef.current?.scrollTo({ top: 0, behavior: 'instant' });
+  }, [selectedNews]);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [unreadNewsCount, setUnreadNewsCount] = useState(0);
   const [isImageZoomed, setIsImageZoomed] = useState(false);
