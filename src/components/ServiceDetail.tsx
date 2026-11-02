@@ -4,7 +4,7 @@ import {
   HelpCircle, Edit3, Save, Plus, Trash2, X, AlertCircle, Check,
   Image as ImageIcon, Video, FileDown, Eye, EyeOff, AlertTriangle,
   ExternalLink, Download, Layers, Sparkles, GripVertical, ChevronUp, ChevronDown, Sliders, Info, ListOrdered,
-  Maximize2, Minimize2, ZoomIn, LayoutGrid, Type, Columns, House
+  Maximize2, Minimize2, ZoomIn, LayoutGrid, Type, Columns, House, ArrowLeft
 } from 'lucide-react';
 import { Service, FAQ, StepItem, ServiceFAQ, ServiceAttachment, CategoryConfig } from '../types';
 import { getDefaultServiceDetails, defaultCategories } from '../data';
@@ -485,6 +485,8 @@ export default function ServiceDetail({
   };
 
   const [draft, setDraft] = useState<(Service & { hidden?: boolean })>(() => getPreparedDraft(service));
+  const [isDecisionAnswerView, setIsDecisionAnswerView] = useState(false);
+  const decisionTreeBackHandler = React.useRef<(() => void) | null>(null);
   const [isFlowEditorOpen, setIsFlowEditorOpen] = useState(false);
   const [isPageBuilderOpen, setIsPageBuilderOpen] = useState(false);
 
@@ -1197,12 +1199,22 @@ export default function ServiceDetail({
               <button 
                 id="btn-service-back"
                 type="button"
-                onClick={handleRequestExit}
-                className="min-h-[40px] shrink-0 inline-flex items-center gap-1.5 px-2 py-2 rounded-lg text-xs sm:text-sm font-semibold text-slate-500 hover:text-blue-700 hover:bg-blue-50 transition-colors cursor-pointer"
-                title="Ir al menú principal"
+                onClick={() => {
+                  if (isDecisionAnswerView) {
+                    decisionTreeBackHandler.current?.();
+                  } else {
+                    handleRequestExit();
+                  }
+                }}
+                className="min-h-[44px] shrink-0 inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-xl border border-slate-300 bg-slate-50 text-sm font-semibold text-slate-700 hover:bg-slate-100 hover:border-slate-400 transition-colors cursor-pointer"
+                title={isDecisionAnswerView ? "Volver a Preguntas" : "Volver al Menú"}
               >
-                <House className="w-4 h-4" />
-                <span>Menú principal</span>
+                {isDecisionAnswerView ? (
+                  <ArrowLeft className="w-4 h-4 text-slate-500" />
+                ) : (
+                  <House className="w-4 h-4 text-slate-500" />
+                )}
+                <span>{isDecisionAnswerView ? "Volver a Preguntas" : "Volver al Menú"}</span>
               </button>
 
               <div className="flex items-center gap-2.5 min-w-0">
@@ -1232,6 +1244,10 @@ export default function ServiceDetail({
               <DecisionTreeNavigator
                 tree={draft.decisionTree}
                 onOpenLightbox={(url, title) => setLightboxImage({ url, title })}
+                onNavigationStateChange={(isAnswerView, onBack) => {
+                  setIsDecisionAnswerView(isAnswerView);
+                  decisionTreeBackHandler.current = onBack;
+                }}
                 serviceTitle={draft.title}
               />
             </div>
