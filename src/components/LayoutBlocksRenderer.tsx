@@ -293,22 +293,24 @@ export const LayoutBlocksRenderer: React.FC<LayoutBlocksRendererProps> = ({
         if (block.type === 'text') {
           const alignClass = block.align === 'center' ? 'text-center' : block.align === 'right' ? 'text-right' : 'text-left';
           const styleClass = block.style === 'lead' ? 'text-base sm:text-lg font-medium text-slate-800' : block.style === 'heading' ? 'text-lg sm:text-xl font-bold text-slate-900' : 'text-sm sm:text-base';
+          const fontSizePx = block.fontSizePx ?? 16;
 
           return (
             <div 
               key={block.id || `text-${index}`}
-              className={`bg-white border border-slate-200 rounded-2xl px-2 sm:px-3 py-6 sm:py-8 shadow-xs space-y-4 ${alignClass}`}
+              className={`bg-white border border-slate-200 rounded-2xl px-2 sm:px-3 py-6 sm:py-8 shadow-xs space-y-4 ${alignClass}`} style={{ fontSize: `${fontSizePx}px` }}
             >
               {block.title && (
                 <h3 className={`text-base sm:text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2 ${block.align === 'center' ? 'justify-center' : block.align === 'right' ? 'justify-end' : ''}`}>
                   <FileText className="w-5 h-5 text-blue-600 shrink-0" />
-                  <span>{block.title}</span>
+                  <span style={{ fontSize: `${fontSizePx}px` }}>{block.title}</span>
                 </h3>
               )}
               <div 
                 style={{
                   whiteSpace: 'pre-wrap',
                   wordBreak: 'break-word',
+                  fontSize: `${fontSizePx}px`,
                 }}
                 className={`${styleClass} whitespace-pre-wrap break-words`}
               >
