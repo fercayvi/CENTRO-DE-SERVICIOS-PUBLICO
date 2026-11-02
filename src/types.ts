@@ -76,6 +76,7 @@ export interface TextLayoutBlock {
   content: string;
   align?: 'left' | 'center' | 'right';
   style?: 'normal' | 'lead' | 'heading';
+  fontSizePx?: number;
 }
 
 export interface AlertLayoutBlock {
@@ -133,6 +134,7 @@ export interface TableLayoutBlock {
   headers: string[];
   rows: string[][];
   showHeader: boolean;
+  fontSizePx?: number;
 }
 
 export interface ColumnSlot {
@@ -257,4 +259,8 @@ export interface ContactInfo {
 export interface SiteSettings {
   defaultHomeView: 'categories' | 'all_services';
   showNewsOnHome?: boolean;
+  decisionTreeButtonFontSize?: number;
+  decisionTreeBreadcrumbFontSize?: number;
+  serviceTitleFontSize?: number;
+  decisionTreeOptionTitleFontSize?: number;
 }
