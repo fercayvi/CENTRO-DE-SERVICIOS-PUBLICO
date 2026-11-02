@@ -13,6 +13,7 @@ interface DecisionTreeNavigatorProps {
   tree: ServiceNode[];
   onOpenLightbox?: (url: string, title?: string) => void;
   serviceTitle?: string;
+  onNavigationStateChange?: (isAnswerView: boolean, onBack: () => void) => void;
 }
 
 function getNodeBlocks(node: ServiceNode): LayoutBlock[] {
@@ -33,7 +34,8 @@ function getCleanButtonTitle(title?: string): string {
 export const DecisionTreeNavigator: React.FC<DecisionTreeNavigatorProps> = ({
   tree,
   onOpenLightbox,
-  serviceTitle = 'Trámite'
+  serviceTitle = 'Trámite',
+  onNavigationStateChange
 }) => {
   // Navigation stack: array of selected nodes from root to current
   const [navPath, setNavPath] = useState<ServiceNode[]>([]);
@@ -114,6 +116,12 @@ export const DecisionTreeNavigator: React.FC<DecisionTreeNavigatorProps> = ({
     setNavPath([]);
     scrollToTop();
   };
+
+  const isAnswerView = currentNode?.nodeType === 'content' || currentNode?.nodeType === 'step';
+
+  useEffect(() => {
+    onNavigationStateChange?.(isAnswerView, isAnswerView ? handleGoBack : handleReset);
+  }, [navPath, currentNode, onNavigationStateChange, isAnswerView]);
 
   // Current options to display if at root or category node
   const currentOptions = currentNode ? (currentNode.children || []) : tree;
