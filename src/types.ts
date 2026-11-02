@@ -157,7 +157,8 @@ export type LayoutBlock =
   | MediaLayoutBlock
   | ColumnsLayoutBlock
   | ButtonLayoutBlock
-  | DividerLayoutBlock\n  | TableLayoutBlock;
+  | DividerLayoutBlock
+  | TableLayoutBlock;
 
 export interface Service {
   id: ServiceId | string;
