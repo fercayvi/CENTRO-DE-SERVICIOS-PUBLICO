@@ -121,7 +121,7 @@ export const DecisionTreeNavigator: React.FC<DecisionTreeNavigatorProps> = ({
   // Reusable Step Navigation Bar (Top and Bottom)
   const renderStepNavigation = (isTop: boolean) => {
     return (
-      <div className={`${isTop ? 'border-b border-slate-100 pb-3 mb-3' : 'border-t border-slate-100 pt-4 mt-4'} flex items-center justify-between gap-3`}>
+      <div className={`${isTop ? 'border-b border-slate-100 pb-3 mb-3' : 'border-t border-slate-100 pt-4 mt-4'} flex items-center justify-center gap-3`}>
         {navPath.length > 0 ? (
           <button
             type="button"
@@ -232,20 +232,6 @@ export const DecisionTreeNavigator: React.FC<DecisionTreeNavigatorProps> = ({
             )}
           </nav>
 
-          {/* Controles discretos fantasma alineados a la derecha */}
-          {navPath.length > 0 && (
-            <div className="flex items-center shrink-0">
-              <button
-                type="button"
-                onClick={handleReset}
-                className="min-h-[48px] flex items-center gap-1.5 px-3 py-1 text-slate-500 hover:text-slate-800 text-xs sm:text-sm font-normal transition-colors cursor-pointer bg-transparent border-0"
-                title="Reiniciar asistente"
-              >
-                <RotateCcw className="w-4 h-4 text-slate-500" />
-                <span>Reiniciar</span>
-              </button>
-            </div>
-          )}
         </div>
 
         {/* ==================== VISTA 1: PASO DE TUTORIAL ==================== */}
