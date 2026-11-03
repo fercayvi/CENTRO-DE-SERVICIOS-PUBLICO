@@ -34,11 +34,9 @@ export default function PublicApp() {
   const [unreadNewsCount, setUnreadNewsCount] = useState(0);
   const [isImageZoomed, setIsImageZoomed] = useState(false);
 
-  // En la versión pública, regresar automáticamente al inicio tras 2 minutos sin actividad,
-  // tanto al consultar un trámite como al permanecer en cualquier sección de navegación.
+  // En la versión pública, regresar al menú principal tras 2 minutos sin actividad,
+  // independientemente de la sección o posición de desplazamiento en la que se encuentre la persona.
   useEffect(() => {
-    if (!selectedService && !selectedNews && currentTab === 'inicio') return;
-
     let idleTimeout: ReturnType<typeof setTimeout>;
 
     const returnToMenu = () => {
@@ -48,6 +46,8 @@ export default function PublicApp() {
       setSearchQuery('');
       setCurrentTab('inicio');
       setSelectedCategory(null);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      scrollRef.current?.scrollTo({ top: 0, behavior: 'instant' });
     };
 
     const resetIdleTimeout = () => {
